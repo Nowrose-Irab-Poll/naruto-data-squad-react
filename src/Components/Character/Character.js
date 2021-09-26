@@ -2,7 +2,7 @@ import React from 'react';
 
 const Character = (props) => {
     const {name, img, hp, classification,sex, naturetypes} = props.character;
-    console.log(img);
+    const handleAddtoSquad = props.handleAddtoSquad;
     return (
         <div className='col'>
             <div className="card h-100">
@@ -13,18 +13,18 @@ const Character = (props) => {
                     <p className="card-text"><small>{sex}</small></p>
                     <p className="card-text">Classification: {'    '}
                         {
-                            classification.map( type =><span class="badge bg-primary mx-1">{type}</span>)
+                            classification.map( type =>{<span className="badge bg-primary mx-1">{type}</span>})
                         }
                     </p>
                     <p className="card-text">Nature Types: 
                         {
-                            naturetypes.map( type =><span class="badge bg-secondary m-1">{type}</span>)
+                            naturetypes.map( type =>{<span className="badge bg-primary mx-1">{type}</span>})
                         }
                     </p>
                 </div>
                 <div className="card-footer">
                     <h5>HP: {hp}</h5>
-                    <button className='btn btn-primary'>Add to Squad</button>
+                    <button onClick={()=>handleAddtoSquad(props.character)} className='btn btn-primary'>Add to Squad</button>
                 </div>
 
 

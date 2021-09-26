@@ -5,6 +5,7 @@ import Characters from '../Characters/Characters';
 const Picker = () => {
 
     const [characters, setCharacters] = useState([]);
+    const [squad, setSquad] = useState([]);
 
     useEffect(()=>{
         fetch('./fakedb.JSON')
@@ -12,13 +13,19 @@ const Picker = () => {
         .then(json => setCharacters(json))
     }, [])
 
+    const handleAddtoSquad = character => {
+        const newSquad = [...squad, character]
+        setSquad(newSquad)
+        console.log(newSquad)
+    }
+
     return (
         <div className='row'>
-            <div className='col-9'>
-                <Characters characters={characters}/>
+            <div className='col-lg-9'>
+                <Characters handleAddtoSquad={handleAddtoSquad} characters={characters}/>
             </div>
-            <div className='col-3'>
-                <Cart/>
+            <div className='col-lg-3'>
+                <Cart squad={squad}/>
 
             </div>
 
