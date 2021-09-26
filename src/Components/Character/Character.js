@@ -24,7 +24,7 @@ const Character = (props) => {
                 </div>
                 <div className="card-footer">
                     <h5>HP: {hp}</h5>
-                    <button onClick={()=>handleAddtoSquad(props.character)} className='btn btn-primary'>Add to Squad</button>
+                    <button onClick={()=>handleAddtoSquad(props.character)} className='btn btn-primary'><i class="fas fa-user-plus"></i> Add to Squad</button>
                 </div>
 
 
