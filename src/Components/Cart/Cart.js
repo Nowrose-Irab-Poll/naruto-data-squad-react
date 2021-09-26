@@ -1,4 +1,5 @@
 import React from 'react';
+import './Cart.css'
 
 const Cart = (props) => {
     
@@ -7,15 +8,15 @@ const Cart = (props) => {
     const totalHP = squad.reduce((previous, current)=> previous+=current.hp, 0)
 
     return (
-        <div>
+        <div className='m-5 p-3 cart-color rounded'>
             <h5>Total characters: {squad.length}</h5>
             <h5>Total HP: {totalHP}</h5>
             <h3>Cart</h3>
-            <ul>
+            <ol>
                 {
                     squad.map(character => <li>{character.name}</li>)
                 }
-            </ul>            
+            </ol>            
         </div>
     );
 };

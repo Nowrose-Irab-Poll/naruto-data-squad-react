@@ -4,17 +4,18 @@ import './Banner.css'
 
 const Banner = () => {
     return (
-        <div className='d-flex p-5'>
-            <div className='banner w-50'>
-                <div className=''>
+        <div>
+            <div>
+                <img src={banner} alt="" className='w-100' height='300px'/>
+            </div>
+
+            <div className ='p-5'>
+                <div>
                     <h1>Naruto Squad</h1>
                     <h2>Create your own Ninja Squad</h2>
-                    <h2>Total HP: 300</h2>
+                    <h3>Total HP: 300</h3>
 
                 </div>
-            </div>
-            <div>
-                <img src={banner} alt="" className='w-50'/>
             </div>
 
         </div>

@@ -8,7 +8,7 @@ const Characters = (props) => {
 
     return (
         <>
-            <h3 className='m-4'>Character List</h3>
+            <h2 className='m-4'>Character List</h2>
             <div className='row row-cols-1 row-cols-md-3 g-4'>
                 {
                     characters.map(character => <Character 
